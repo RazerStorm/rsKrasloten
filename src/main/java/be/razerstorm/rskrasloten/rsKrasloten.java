@@ -3,7 +3,7 @@ package be.razerstorm.rskrasloten;
 import be.razerstorm.rskrasloten.commands.KraslotenCMD;
 import be.razerstorm.rskrasloten.listeners.PlayerInteract;
 import be.razerstorm.rskrasloten.utils.Metrics;
-import lombok.Getter;
+
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
