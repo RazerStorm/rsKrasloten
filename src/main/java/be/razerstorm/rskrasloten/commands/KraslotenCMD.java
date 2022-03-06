@@ -19,14 +19,9 @@ public class KraslotenCMD implements CommandExecutor {
     }
 
     public void helpMessage(Player p) {
-        p.sendMessage(Format.chat(""));
-        p.sendMessage(Format.chat(""));
-        p.sendMessage(Format.chat(""));
-        p.sendMessage(Format.chat(""));
-        p.sendMessage(Format.chat(""));
-        p.sendMessage(Format.chat(""));
-        p.sendMessage(Format.chat(""));
-        p.sendMessage(Format.chat(""));
+        p.sendMessage(Format.chat("&3/kraslot &bhelp &f- &3Bekijk dit help menu."));
+        p.sendMessage(Format.chat("&3/kraslot &bkrijg &f- &3Ontvang een kraslot."));
+        p.sendMessage(Format.chat("&3/kraslot &binfo &f- &3Check de versie van de plugin na."));
     }
 
     JavaPlugin main = JavaPlugin.getPlugin(rsKrasloten.class);
@@ -44,7 +39,7 @@ public class KraslotenCMD implements CommandExecutor {
                 helpMessage(p);
                 return false;
             }else if(Objects.equals(args[0], "krijg")) {
-                if(!(p.hasPermission("rskrasloten.krijg"))) {
+                if (!(p.hasPermission("rskrasloten.krijg"))) {
                     p.sendMessage(Format.chat(main.getConfig().getString("messages.permission-error")));
                     return false;
                 }
@@ -53,6 +48,11 @@ public class KraslotenCMD implements CommandExecutor {
                 p.getInventory().addItem(kraslot);
                 p.sendMessage(Format.chat(main.getConfig().getString("messages.kraslot-gekregen")));
                 return false;
+            }else if(Objects.equals(args[0], "info")){
+                p.sendMessage(Format.chat("&3rsKrasloten &8| &7Versie: &3V" + main.getDescription().getVersion()));
+                p.sendMessage(Format.chat("&3rsKrasloten &8| &7Gemaakt door &3RazerStorm#4199"));
+                return false;
+
             }else{
                 helpMessage(p);
                 return false;
