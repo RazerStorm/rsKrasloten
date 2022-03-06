@@ -1,4 +1,4 @@
-package be.razerstorm.rskrasloten.manager;
+package be.razerstorm.rskrasloten.utils;
 
 import be.razerstorm.rskrasloten.rsKrasloten;
 import be.razerstorm.rskrasloten.utils.Format;

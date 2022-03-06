@@ -1,6 +1,6 @@
 package be.razerstorm.rskrasloten.commands;
 
-import be.razerstorm.rskrasloten.manager.KraslotenMNGR;
+import be.razerstorm.rskrasloten.utils.KraslotenMNGR;
 import be.razerstorm.rskrasloten.rsKrasloten;
 import be.razerstorm.rskrasloten.utils.Format;
 import org.bukkit.command.Command;
