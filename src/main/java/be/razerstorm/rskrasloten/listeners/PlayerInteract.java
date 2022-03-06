@@ -10,6 +10,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -23,7 +24,10 @@ public class PlayerInteract implements Listener {
         Player p = e.getPlayer();
         if(e.getItem() == null) return;
         if(e.getItem().getItemMeta() == null) return;
+        if(e.getItem().getItemMeta().getDisplayName() == null) return;
+        if(e.getHand() != EquipmentSlot.HAND) return;
         if( !(e.getAction().equals(Action.RIGHT_CLICK_AIR) || e.getAction().equals(Action.RIGHT_CLICK_BLOCK) )) return;
+        if (e.getItem().getType() == Material.AIR) return;
         if(!(e.getItem().getType().equals(Material.valueOf(main.getConfig().getString("kraslot-item.item"))))) return;
 
         KraslotenMNGR manager = new KraslotenMNGR(p);
@@ -36,9 +40,7 @@ public class PlayerInteract implements Listener {
         }
         rsKrasloten.superCooleKrassers.add(p.getUniqueId());
 
-        ItemStack hand = p.getInventory().getItemInHand();
-        hand.setAmount(hand.getAmount() - 1);
-        p.getInventory().setItemInHand(hand);
+        p.getInventory().getItemInMainHand().setAmount(p.getInventory().getItemInMainHand().getAmount() - 1);
 
         manager.openKraslot(main.getConfig().getDouble("settings.money.minimum"), main.getConfig().getDouble("settings.money.maximum"));
     }
