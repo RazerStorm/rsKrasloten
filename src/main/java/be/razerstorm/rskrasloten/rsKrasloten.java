@@ -13,8 +13,6 @@ import java.util.UUID;
 
 public final class rsKrasloten extends JavaPlugin {
 
-    private static @Getter rsKrasloten instance;
-
     private static Economy econ = null;
 
     public static ArrayList<UUID> superCooleKrassers = new ArrayList<>();
@@ -22,7 +20,6 @@ public final class rsKrasloten extends JavaPlugin {
     @Override
     public void onEnable() {
         saveDefaultConfig();
-        instance = this;
 
         if (!setupEconomy() ) {
             getLogger().warning("Vault not found! Disabling plugin...");
