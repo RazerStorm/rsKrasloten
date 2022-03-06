@@ -2,3 +2,5 @@ name: rsKrasloten
 version: '${version}'
 main: be.razerstorm.rskrasloten.rsKrasloten
 authors: [ RazerStorm ]
+commands:
+  kraslot:
