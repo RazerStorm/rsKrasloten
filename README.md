@@ -1,5 +1,5 @@
 # rsKrasloten
-#De volledige uitleg is te vinden op mijn spigot pagina.
+De volledige uitleg is te vinden op mijn spigot pagina.
 
 ## Wil jij deze plugin forken?
 Kijk onze license na, je mag bevoorbeeld geen credits weghalen.
