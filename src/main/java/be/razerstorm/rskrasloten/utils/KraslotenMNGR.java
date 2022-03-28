@@ -60,6 +60,7 @@ public class KraslotenMNGR {
                 String subTitle = main.getConfig().getString("messages.gekrast.subtitle").replaceAll("%money%", String.valueOf(amount));
 
                 p.sendTitle(Format.chat(title), Format.chat(subTitle), 10, 20*2, 20);
+
                 rsKrasloten.superCooleKrassers.remove(p.getUniqueId());
             }
         }, 20*2);

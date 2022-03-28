@@ -26,7 +26,10 @@ dependencies {
     implementation 'org.projectlombok:lombok:1.18.20'
     compileOnly 'org.spigotmc:spigot-api:1.12.2-R0.1-SNAPSHOT'
     compileOnly "com.github.MilkBowl:VaultAPI:1.7"
+    //compileOnly fileTree(dir: 'libs', include: '*.jar')
+    implementation 'com.github.RazerStorm:rsLogger:1.1'
 }
+
 
 def targetJavaVersion = 8
 java {
@@ -43,6 +46,8 @@ tasks.withType(JavaCompile).configureEach {
         options.release = targetJavaVersion
     }
 }
+
+System.out.print()
 
 processResources {
     def props = [version: version]
