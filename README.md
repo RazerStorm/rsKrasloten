@@ -5,11 +5,6 @@ Kijk onze license na, je mag bevoorbeeld geen credits weghalen.
 Gelieve ook bstats erin te laten.
 Voor de rest mag je er mee doen wat je wilt :)
 
-## Commands
-/kraslot help
-/kraslot krijg
-/kraslot info
-
 | Commands  |
 |---|
 | /kraslot help |
