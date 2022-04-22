@@ -7,11 +7,14 @@ Voor de rest mag je er mee doen wat je wilt :)
 
 ## Commands
 /kraslot help
-
 /kraslot krijg
-
 /kraslot info
 
+| Commands  |
+|---|
+| /kraslot help |
+| /kraslot krijg |
+| /kraslot info |
 
 
 
