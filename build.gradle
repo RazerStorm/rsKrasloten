@@ -27,7 +27,6 @@ dependencies {
     compileOnly 'org.spigotmc:spigot-api:1.12.2-R0.1-SNAPSHOT'
     compileOnly "com.github.MilkBowl:VaultAPI:1.7"
     //compileOnly fileTree(dir: 'libs', include: '*.jar')
-    implementation 'com.github.RazerStorm:rsLogger:1.1'
 }
 
 
